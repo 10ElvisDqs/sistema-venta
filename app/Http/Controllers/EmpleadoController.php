@@ -76,13 +76,13 @@ class EmpleadoController extends Controller
 
         $empleados->save();
 
-        return redirect('/empleado');
+        return redirect('/empleado')->with('success', 'Empleado actualizado exitosamente');
     }
 
         public function destroy( $id)
     {
         $empleado = Empleado::find($id);
         $empleado->delete();
-        return redirect('/empleado');
+        return redirect('/empleado')->with('success', 'Empleado eliminado exitosamente');
     }
 }

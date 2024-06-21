@@ -5,6 +5,12 @@
 <h1>LISTA DE EMPLEADOS</h1>
 <p></p>
     <a href="empleado/create" class="btn btn-primary">CREAR</a>
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+   
 
     <table class="table table-dark table-striped mt-4">
         <thead>
@@ -36,6 +42,7 @@
                     <a href="/empleado/{{ $empleado->id}}/edit" class="btn btn-info">Editar</a>
                     @csrf
                     @method('DELETE')
+
                     <button type="submit" class="btn btn-danger">Eliminar</button>
                     </form>
                 </td>
