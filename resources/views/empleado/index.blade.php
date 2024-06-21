@@ -32,8 +32,12 @@
                 <td>{{ $empleado->edad }}</td>
                 <td>{{ $empleado->sexo }}</td>
                 <td>
-                    <a href="#" class="btn btn-info">Editar</a>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <form action="{{ route ('empleado.destroy',$empleado->id)}}" method="POST">
+                    <a href="/empleado/{{ $empleado->id}}/edit" class="btn btn-info">Editar</a>
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
                 </td>
             </tr>
             @endforeach

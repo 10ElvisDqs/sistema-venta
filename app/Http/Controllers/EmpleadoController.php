@@ -45,19 +45,34 @@ class EmpleadoController extends Controller
     }
 
 
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $empleado = Empleado::find($id);
+        return view('empleado.edit')->with('empleado',$empleado);
     }
 
 
     public function update(Request $request, string $id)
     {
-        //
+        $empleados = Empleado::find($id);
+
+        $empleados->nombre =$request->get('nombre');
+        $empleados->paterno =$request->get('paterno');
+        $empleados->materno =$request->get('materno');
+        $empleados->telefono =$request->get('telefono');
+        $empleados->direccion =$request->get('direccion');
+        $empleados->edad =$request->get('edad');
+        $empleados->sexo =$request->get('sexo');
+
+        $empleados->save();
+
+        return redirect('/empleado');
     }
 
-        public function destroy(string $id)
+        public function destroy( $id)
     {
-        //
+        $empleado = Empleado::find($id);
+        $empleado->delete();
+        return redirect('/empleado');
     }
 }
