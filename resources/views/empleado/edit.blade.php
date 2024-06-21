@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-<h2>EDITAR REGISTROS</h2>
+<h2>EDITAR REGISTROS DE EMPLEADO</h2>
 <form action="/empleado/{{$empleado->id}}" method="POST">
     @csrf
     @method('PUT')

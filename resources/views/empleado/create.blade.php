@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>CREAR REGISTROS</h2>
+<h2>CREAR REGISTROS DE EMPLEADO</h2>
 
 @if ($errors->any())
     <div class="alert alert-danger">
