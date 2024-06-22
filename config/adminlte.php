@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Venta',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Venta</b>ICSJE',
+    'logo_img' => 'vendor/adminlte/dist/img/online-shoppingr.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/online-shoppingr.jpg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -113,7 +113,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/online-shoppingr.jpg',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -323,8 +323,23 @@ return [
         [
             'text' => 'Clientes',
             'url' => 'cliente',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-user text-lightblue',
             'label_color' => 'success',
+
+            'submenu' => [
+            [
+                'text' => 'Todos los Clientes',
+                'url' => 'cliente',
+                'icon' => 'fas fa-lg fa-file-alt text-warning',
+                'label_color' => 'success',
+            ],
+            [
+                'text' => 'Agregar Cliente',
+                'url' => 'cliente/create',
+                'icon' => 'fa fa-user-plus text-lightblue',
+            ],
+            // Puedes agregar más elementos de submenú aquí según sea necesario
+        ],
         ],
 
         [
@@ -372,22 +387,62 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/buttons/js/dataTables.buttons.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/buttons/js/buttons.bootstrap4.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/buttons/js/buttons.html5.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/buttons/js/buttons.print.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/jszip/jszip.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/pdfmake/pdfmake.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/pdfmake/vfs_fonts.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/datatables-plugins/buttons/css/buttons.bootstrap4.min.css',
                 ],
             ],
         ],
@@ -404,6 +459,7 @@ return [
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
                 ],
+
             ],
         ],
         'Chartjs' => [
@@ -441,6 +497,28 @@ return [
                 ],
             ],
         ],
+        'TempusDominusBs4' => [
+        'active' => false,
+        'files' => [
+            [
+                'type' => 'js',
+                'asset' => true,
+                'location' => 'vendor/moment/moment.min.js',
+            ],
+            [
+                'type' => 'js',
+                'asset' => true,
+                'location' => 'vendor/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js',
+            ],
+            [
+                'type' => 'css',
+                'asset' => true,
+                'location' => 'vendor/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+            ],
+        ],
+    ],
+
+
     ],
 
     /*

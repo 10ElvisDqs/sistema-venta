@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'VentaICSJE')
 
 @section('content_header')
     <h1>Examen de Software 1</h1>
