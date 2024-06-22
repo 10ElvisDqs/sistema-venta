@@ -34,7 +34,7 @@
         <label for="sexo" class="form-label">Sexo</label>
         <input id="sexo" name="sexo" type="text" class="form-control" tabindex="7">
     </div>
-    <a href="/empleados" class="btn btn-secondary" tabindex="8">Cancelar</a>
+    <a href="/empleado" class="btn btn-secondary" tabindex="8">Cancelar</a>
     <button type="submit" class="btn btn-primary" tabindex="9">Guardar</button>
 </form>
 
