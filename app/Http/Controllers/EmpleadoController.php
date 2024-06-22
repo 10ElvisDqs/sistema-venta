@@ -24,18 +24,28 @@ class EmpleadoController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'paterno' => 'required|string|max:255',
+            'materno' => 'required|string|max:255',
+            'telefono' => 'required|string|max:15',
+            'direccion' => 'required|string|max:255',
+            'edad' => 'required|integer|min:0',
+            'sexo' => 'required|string|max:10',
+        ]);
+
         $empleados = new Empleado();
-        $empleados->nombre =$request->get('nombre');
-        $empleados->paterno =$request->get('paterno');
-        $empleados->materno =$request->get('materno');
-        $empleados->telefono =$request->get('telefono');
-        $empleados->direccion =$request->get('direccion');
-        $empleados->edad =$request->get('edad');
-        $empleados->sexo =$request->get('sexo');
+        $empleados->nombre = $request->get('nombre');
+        $empleados->paterno = $request->get('paterno');
+        $empleados->materno = $request->get('materno');
+        $empleados->telefono = $request->get('telefono');
+        $empleados->direccion = $request->get('direccion');
+        $empleados->edad = $request->get('edad');
+        $empleados->sexo = $request->get('sexo');
 
         $empleados->save();
 
-        return redirect('/empleado');
+        return redirect('/empleado')->with('success', 'Empleado creado exitosamente');
     }
 
 
