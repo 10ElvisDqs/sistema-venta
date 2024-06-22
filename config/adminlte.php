@@ -316,7 +316,7 @@ return [
         [
             'text' => 'Empleados',
             'url' => 'empleado',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-fw fa-user-tie',
             'label_color' => 'success',
         ],
 
@@ -345,7 +345,7 @@ return [
         [
             'text' => 'Productos',
             'url' => 'producto',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-fw fa-shopping-bag',
             'label_color' => 'success',
         ],
 
