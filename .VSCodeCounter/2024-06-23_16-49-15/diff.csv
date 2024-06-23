@@ -1,0 +1,12 @@
+"filename", "language", "XML", "YAML", "PHP", "comment", "blank", "total"
+"c:\xampp\htdocs\sistema-venta\app\Models\Empleado.php", "PHP", 0, 0, 13, 10, 2, 25
+"c:\xampp\htdocs\sistema-venta\app\Models\Producto.php", "PHP", 0, 0, 14, 10, 2, 26
+"c:\xampp\htdocs\sistema-venta\database\factories\ClienteFactory.php", "PHP", 0, 0, 23, 13, 5, 41
+"c:\xampp\htdocs\sistema-venta\database\factories\EmpleadoFactory.php", "PHP", 0, 0, 22, 13, 5, 40
+"c:\xampp\htdocs\sistema-venta\database\factories\ProductoFactory.php", "PHP", 0, 0, 22, 13, 5, 40
+"c:\xampp\htdocs\sistema-venta\database\seeders\ClienteSeeder.php", "PHP", 0, 0, 11, 3, 4, 18
+"c:\xampp\htdocs\sistema-venta\database\seeders\EmpleadoSeeder.php", "PHP", 0, 0, 11, 3, 4, 18
+"c:\xampp\htdocs\sistema-venta\database\seeders\ProductoSeeder.php", "PHP", 0, 0, 11, 3, 4, 18
+"c:\xampp\htdocs\sistema-venta\docker-compose.yml", "YAML", 0, 55, 0, 0, 1, 56
+"c:\xampp\htdocs\sistema-venta\phpunit.xml", "XML", 1, 0, 0, -2, 0, -1
+"Total", "-", 1, 55, 127, 66, 32, 281
