@@ -8,6 +8,10 @@ use App\Models\Empleado;
 
 class EmpleadoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -58,7 +62,7 @@ class EmpleadoController extends Controller
     public function edit($id)
     {
         $empleado = Empleado::find($id);
-        return view('empleado.edit')->with('empleado',$empleado);
+        return view('empleado.edit')->with('empleado', $empleado);
     }
 
 
@@ -66,20 +70,20 @@ class EmpleadoController extends Controller
     {
         $empleados = Empleado::find($id);
 
-        $empleados->nombre =$request->get('nombre');
-        $empleados->paterno =$request->get('paterno');
-        $empleados->materno =$request->get('materno');
-        $empleados->telefono =$request->get('telefono');
-        $empleados->direccion =$request->get('direccion');
-        $empleados->edad =$request->get('edad');
-        $empleados->sexo =$request->get('sexo');
+        $empleados->nombre = $request->get('nombre');
+        $empleados->paterno = $request->get('paterno');
+        $empleados->materno = $request->get('materno');
+        $empleados->telefono = $request->get('telefono');
+        $empleados->direccion = $request->get('direccion');
+        $empleados->edad = $request->get('edad');
+        $empleados->sexo = $request->get('sexo');
 
         $empleados->save();
 
         return redirect('/empleado')->with('success', 'Empleado actualizado exitosamente');
     }
 
-        public function destroy( $id)
+    public function destroy($id)
     {
         $empleado = Empleado::find($id);
         $empleado->delete();

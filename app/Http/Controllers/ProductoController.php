@@ -8,6 +8,10 @@ use App\Models\Producto;
 
 class ProductoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -30,6 +34,16 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'abreviatura' => 'required|string|max:255',
+            'descripcion' => 'required|string|max:255',
+            'precio' => 'required|numeric|min:0|max:9999999.99', // Numeric to allow decimals, with a realistic max value.
+            'stock' => 'required|integer|min:0',
+            'marca' => 'nullable|string|max:255',
+            'Pais_Origen' => 'nullable|string|max:255',
+        ]);
+
         $productos = new Producto();
         $productos->nombre = $request->get('nombre');
         $productos->abreviatura = $request->get('abreviatura');
@@ -57,8 +71,7 @@ class ProductoController extends Controller
     public function edit(string $id)
     {
         $producto = Producto::find($id);
-        return view('producto.edit')->with('producto',$producto);
-        
+        return view('producto.edit')->with('producto', $producto);
     }
 
     /**
@@ -86,7 +99,7 @@ class ProductoController extends Controller
     {
         $producto = Producto::findOrFail($id);
         $producto->delete();
-        
+
         return redirect('/producto')->with('success', 'Producto eliminado exitosamente');
     }
 }

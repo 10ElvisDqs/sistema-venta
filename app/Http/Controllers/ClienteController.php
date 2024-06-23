@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -23,16 +27,16 @@ class ClienteController extends Controller
 
         // Añadir los datos de los clientes a la configuración
         foreach ($clientes as $client) {
-            $btnEdit = '<a href="'.route('cliente.edit', $client->id).'" class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
+            $btnEdit = '<a href="' . route('cliente.edit', $client->id) . '" class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
                         <i class="fa fa-lg fa-fw fa-pen"></i>
                     </a>';
-            $btnDelete = '<form action="'.route('cliente.destroy', $client->id).'" method="POST" style="display:inline;">
-                            '.csrf_field().method_field('DELETE').'
+            $btnDelete = '<form action="' . route('cliente.destroy', $client->id) . '" method="POST" style="display:inline;">
+                            ' . csrf_field() . method_field('DELETE') . '
                             <button type="submit" class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete">
                                 <i class="fa fa-lg fa-fw fa-trash"></i>
                             </button>
                         </form>';
-            $btnDetails = '<a href="'.route('cliente.show', $client->id).'" class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
+            $btnDetails = '<a href="' . route('cliente.show', $client->id) . '" class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
                             <i class="fa fa-lg fa-fw fa-eye"></i>
                         </a>';
             $config['data'][] = [
@@ -45,7 +49,7 @@ class ClienteController extends Controller
                 $client->direccion,
                 $client->ciudad,
                 $client->pais,
-                '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>',
+                '<nobr>' . $btnEdit . $btnDelete . $btnDetails . '</nobr>',
             ];
         }
 
@@ -141,7 +145,7 @@ class ClienteController extends Controller
 
 
         return redirect()->route('cliente.index')
-                         ->with('success', 'Cliente actualizado exitosamente.');
+            ->with('success', 'Cliente actualizado exitosamente.');
     }
 
     /**
@@ -154,7 +158,6 @@ class ClienteController extends Controller
         $cliente->delete();
 
         return redirect()->route('cliente.index')
-                         ->with('success', 'Cliente eliminado exitosamente.');
-
+            ->with('success', 'Cliente eliminado exitosamente.');
     }
 }
