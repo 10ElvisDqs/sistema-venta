@@ -1,0 +1,42 @@
+Date : 2024-06-23 16:49:15
+Directory : c:\xampp\htdocs\sistema-venta
+Total : 10 files,  183 codes, 66 comments, 32 blanks, all 281 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| PHP      |          8 |        127 |         68 |         31 |        226 |
+| YAML     |          1 |         55 |          0 |          1 |         56 |
+| XML      |          1 |          1 |         -2 |          0 |         -1 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                 | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                    |         10 |        183 |         66 |         32 |        281 |
+| . (Files)                                                            |          2 |         56 |         -2 |          1 |         55 |
+| app                                                                  |          2 |         27 |         20 |          4 |         51 |
+| app\Models                                                           |          2 |         27 |         20 |          4 |         51 |
+| database                                                             |          6 |        100 |         48 |         27 |        175 |
+| database\factories                                                   |          3 |         67 |         39 |         15 |        121 |
+| database\seeders                                                     |          3 |         33 |          9 |         12 |         54 |
++----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                             | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\xampp\htdocs\sistema-venta\app\Models\Empleado.php                | PHP      |         13 |         10 |          2 |         25 |
+| c:\xampp\htdocs\sistema-venta\app\Models\Producto.php                | PHP      |         14 |         10 |          2 |         26 |
+| c:\xampp\htdocs\sistema-venta\database\factories\ClienteFactory.php  | PHP      |         23 |         13 |          5 |         41 |
+| c:\xampp\htdocs\sistema-venta\database\factories\EmpleadoFactory.php | PHP      |         22 |         13 |          5 |         40 |
+| c:\xampp\htdocs\sistema-venta\database\factories\ProductoFactory.php | PHP      |         22 |         13 |          5 |         40 |
+| c:\xampp\htdocs\sistema-venta\database\seeders\ClienteSeeder.php     | PHP      |         11 |          3 |          4 |         18 |
+| c:\xampp\htdocs\sistema-venta\database\seeders\EmpleadoSeeder.php    | PHP      |         11 |          3 |          4 |         18 |
+| c:\xampp\htdocs\sistema-venta\database\seeders\ProductoSeeder.php    | PHP      |         11 |          3 |          4 |         18 |
+| c:\xampp\htdocs\sistema-venta\docker-compose.yml                     | YAML     |         55 |          0 |          1 |         56 |
+| c:\xampp\htdocs\sistema-venta\phpunit.xml                            | XML      |          1 |         -2 |          0 |         -1 |
+| Total                                                                |          |        183 |         66 |         32 |        281 |
++----------------------------------------------------------------------+----------+------------+------------+------------+------------+
